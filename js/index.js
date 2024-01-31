@@ -20,7 +20,6 @@ const nasaCall = () => {
 };
 
 const gtn = document.querySelector("#gtn");
-
 gtn.addEventListener("click", (event) => {
   event.preventDefault();
   nasaCall();
