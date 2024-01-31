@@ -17,14 +17,13 @@ const nasaCall = () => {
       image.style.width = "500px";
       image.style.height = "500px";
       image.style.margin = "auto";
-      document.body.appendChild(paragraph);
-      document.body.appendChild(image);
+      document.body.append(paragraph);
+      document.body.append(image);
     });
 };
 
-
-const gtn = document.querySelector('#gtn');
-gtn.addEventListener('click', (event) => {
-  event.preventDefault()
-  nasaCall()
-})
+const gtn = document.querySelector("#gtn");
+gtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  nasaCall();
+});

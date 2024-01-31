@@ -23,11 +23,25 @@ body {
   list-style: none;
   bottom: 50px;
   position: relative;
-
-  
 }
 .nav-bar-items {
   text-decoration: none;
   color: black;
+}
 
+.gallery-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.wrapper {
+  border: 2px solid rgb(52, 41, 83);
+  display: grid;
+  height: 800px;
+  width: 80%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin-bottom: 60px;
 }
