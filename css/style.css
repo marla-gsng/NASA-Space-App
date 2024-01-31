@@ -11,8 +11,6 @@ body {
 
 .header-container {
   background-color: lightblue;
-  display: flex;
-  justify-content: space-between;
 }
 
 .logo-img {
@@ -21,12 +19,15 @@ body {
 }
 .nav-bar-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style: none;
-  width: 80%;
+  bottom: 50px;
+  position: relative;
+
+  
 }
 .nav-bar-items {
   text-decoration: none;
   color: black;
-  padding-left: 50px;
+
 }

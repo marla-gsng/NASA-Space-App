@@ -1,7 +1,11 @@
 import { API_Key_NASA } from "./credentials.js";
 
 const nasaCall = () => {
-  fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_Key_NASA}`)
+  const randomNumber = Math.floor(Math.random() * 30);
+
+  fetch(
+    `https://api.nasa.gov/planetary/apod?api_key=${API_Key_NASA}&date=2023-01-${randomNumber}`
+  )
     .then((response) => response.json())
     // .then((json) => console.log(json))
     .then((data) => {
@@ -18,4 +22,9 @@ const nasaCall = () => {
     });
 };
 
-nasaCall();
+
+const gtn = document.querySelector('#gtn');
+gtn.addEventListener('click', (event) => {
+  event.preventDefault()
+  nasaCall()
+})
