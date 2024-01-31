@@ -38,3 +38,62 @@ body {
   height: 400px;
   margin: auto;
 }
+
+
+.footer-main {
+  background-color: #000;
+  width: 100%;
+  margin: 0 auto;
+  
+}
+
+  
+
+.footer {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  list-style-type: none;
+  margin-left: 20px;
+}
+
+.footer-links {
+  height: 300px; 
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-align: left;
+
+}
+h5 {
+  margin-left: 35px;
+}
+
+.footer-links a {
+  color: #e5e5e5;
+}
+li {
+  margin: 15px 0 0 0;
+  color: #e5e5e5;
+}
+
+.footer-social {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.fa-brands {
+  color: #ffffff;
+  padding-right: 20px;
+}
+.Impressum {
+  font-weight: 100;
+  font-size: 0.9rem;
+  color: gray;
+}
