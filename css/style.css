@@ -41,7 +41,7 @@ body {
 
 
 .footer-main {
-  background-color: #000;
+  background-color: #696565;
   width: 100%;
   margin: 0 auto;
   
@@ -59,7 +59,7 @@ body {
 }
 
 .footer-links {
-  height: 300px; 
+  height: 250px; 
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -74,8 +74,7 @@ h5 {
   color: #e5e5e5;
 }
 li {
-  margin: 15px 0 0 0;
-  color: #e5e5e5;
+  color: #ffffff;
 }
 
 .footer-social {
