@@ -9,22 +9,19 @@ const nasaCall = () => {
     .then((response) => response.json())
     // .then((json) => console.log(json))
     .then((data) => {
-      const paragraph = document.createElement("p");
-      paragraph.textContent = data.explanation;
-      paragraph.style.fontSize = "20px";
-      const image = document.createElement("img");
-      image.src = data.hdurl;
-      image.style.width = "500px";
-      image.style.height = "500px";
-      image.style.margin = "auto";
-      document.body.appendChild(paragraph);
-      document.body.appendChild(image);
+      const template = `
+          <p class='APOD-paragraph'>${data.explanation}</p>
+          <img class='APOD-image' src=${data.hdurl}   />
+
+      `;
+
+      document.body.querySelector("#APOD-main").innerHTML = template;
     });
 };
 
+const gtn = document.querySelector("#gtn");
 
-const gtn = document.querySelector('#gtn');
-gtn.addEventListener('click', (event) => {
-  event.preventDefault()
-  nasaCall()
-})
+gtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  nasaCall();
+});
