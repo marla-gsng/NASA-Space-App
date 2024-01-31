@@ -10,6 +10,7 @@ const nasaCall = () => {
     .then((response) => response.json())
     // .then((json) => console.log(json))
     .then((data) => {
+
      let allimage=document.querySelectorAll("img");//
 
       if (allimage.length<=1){//
@@ -48,3 +49,20 @@ gtn.addEventListener('click', (event) => {
   nasaCall()
  
 })
+
+      const template = `
+          <p class='APOD-paragraph'>${data.explanation}</p>
+          <img class='APOD-image' src=${data.hdurl}   />
+
+      `;
+
+      document.body.querySelector("#APOD-main").innerHTML = template;
+    });
+};
+
+const gtn = document.querySelector("#gtn");
+gtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  nasaCall();
+});
+
