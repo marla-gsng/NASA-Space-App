@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   font-family: "Roboto Mono", "Space Grotesk", system-ui, -apple-system,
     BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
@@ -10,19 +10,23 @@ body {
 }
 
 .header-container {
-  background-color: aquamarine;
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-between;
 }
 
-img {
+.logo-img {
   width: 80px;
   height: 80px;
 }
-ul {
+.nav-bar-list {
   display: flex;
   justify-content: space-between;
   list-style: none;
   width: 80%;
 }
-li {
+.nav-bar-items {
   text-decoration: none;
+  color: black;
+  padding-left: 50px;
 }
