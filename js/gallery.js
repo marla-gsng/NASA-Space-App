@@ -1,5 +1,5 @@
 const galleryApi = () => {
-  fetch("https://images-api.nasa.gov/search?q=jupiter&page_size=9")
+  fetch(`https://images-api.nasa.gov/search?q=${input.item}&page_size=9`)
     .then((response) => response.json())
     .then((data) => {
       const wrapper = document.querySelector(".wrapper");
@@ -17,3 +17,11 @@ const galleryApi = () => {
     });
 };
 galleryApi();
+
+const input = document.querySelector(".input");
+
+input.addEventListener("submit",(event) => {
+  event.preventDefault()
+  const input = document.querySelector(".search").item
+  galleryApi(input.item)
+})
