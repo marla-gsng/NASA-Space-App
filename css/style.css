@@ -126,3 +126,7 @@ li {
   align-items: center;
   object-fit: cover;
 }
+#btn1 {
+  width: 100px;
+  height: 20px;
+}

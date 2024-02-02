@@ -1,12 +1,13 @@
-const galleryApi = () => {
-  fetch(`https://images-api.nasa.gov/search?q=${input.item}&page_size=9`)
+
+const galleryApi = (str) => {
+  fetch(str)
     .then((response) => response.json())
     .then((data) => {
       const wrapper = document.querySelector(".wrapper");
       console.log(data.collection.items);
 
       const linksData = data.collection.items.filter((item) => item.links);
-
+      wrapper.innerHTML = "";
       linksData.map((item) => {
         const template = `
           <img class ="img-api" src='${item.links[0].href}' />
@@ -16,12 +17,14 @@ const galleryApi = () => {
       });
     });
 };
-galleryApi();
+const gtn1 = document.querySelector("#btn1");
 
-const input = document.querySelector(".input");
+gtn1.addEventListener("click", (event) => {
+  event.preventDefault();
 
-input.addEventListener("submit",(event) => {
-  event.preventDefault()
-  const input = document.querySelector(".search").item
-  galleryApi(input.item)
-})
+  let txtsearch = document.querySelector("#txtsearch");
+  let str = txtsearch.value;
+  let str2 = "https://images-api.nasa.gov/search?q=" + str + "&page_size=9";
+  galleryApi(str2);
+});
+
