@@ -24,7 +24,7 @@ gtn1.addEventListener("click", (event) => {
 
   let txtsearch = document.querySelector("#txtsearch");
   let str = txtsearch.value;
-  let str2 = "https://images-api.nasa.gov/search?q=" + str + "&page_size=9";
+  let str2 = "https://images-api.nasa.gov/search?q=" + str + "&page_size=09";
   galleryApi(str2);
 });
 
